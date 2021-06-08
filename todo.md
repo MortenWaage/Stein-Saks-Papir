@@ -17,4 +17,9 @@ Ideer for utseende;
 
 Optional; 
 - Lage list over score - Hvem som vant, best av 3 f.ex
-- 
+
+
+
+
+
+Eksempelkode: https://javascript.plainenglish.io/building-a-rock-paper-scissors-game-with-javascript-bce23d39509d
