@@ -8,16 +8,22 @@
     <title>Pokemon Battle</title>
 </head>
 <body>
+    
   <div class="selection">
-    <button id="gress" class="select"><img src="Chikorita.jpg"></button>
-    <button id="vann" class="select"><img src="Magicarp.jpg"></button>
-    <button id="ild" class="select"><img src="Ponyta.jpg"></button>
+    <button id="EARTH"   class="select" onclick="clicked(this.id)">  <img src="Chikorita.jpg">   </button>
+    <button id="WATER"   class="select" onclick="clicked(this.id)">  <img src="Magicarp.jpg">    </button>
+    <button id="FIRE"    class="select" onclick="clicked(this.id)">  <img src="Ponyta.jpg">      </button>
 
   </div>
-
+earth slår vann, vann slår flamme, flamme slår earth
   <div id="result">
 
-RESULT!!
+    <img id="playerImg">
+
+    <div> resultat </div>
+
+    <img id="AIImg">
+
   </div>
     
 <script src="javascript.js"></script>    
