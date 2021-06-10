@@ -8,23 +8,22 @@
     <title>Pokemon Battle</title>
 </head>
 <body>
-    
+  
+    <h1 class="coloring">Chikorita, Ninetales og Ponyta</h1>
+    <h2 class="coloring">Earth beats wind, wind beats flame, flame beats earth</h2>
+
+
   <div class="selection">
-    <button id="EARTH"   class="select" onclick="clicked(this.id)">  <img src="Chikorita.jpg">   </button>
-    <button id="WATER"   class="select" onclick="clicked(this.id)">  <img src="Magicarp.jpg">    </button>
-    <button id="FIRE"    class="select" onclick="clicked(this.id)">  <img src="Ponyta.jpg">      </button>
+    <div class="wrap"> <p>Earth</p> <button id="EARTH"  class="select" onclick="clicked(this.id)">  <img src="Chikorita.png" >   </button> </div>
+    <div class="wrap"> <p>Wind</p>  <button id="WIND"   class="select" onclick="clicked(this.id)">  <img src="Ninetales.png">    </button> </div>
+    <div class="wrap"> <p>Flame</p> <button id="FIRE"   class="select" onclick="clicked(this.id)">  <img src="Ponyta.png">       </button> </div><br />
 
   </div>
-earth slår vann, vann slår flamme, flamme slår earth
-  <div id="result">
 
-    <img id="playerImg">
 
-    <div id="output"> resultat </div>
+  <div class="coloring" id="result"></div>
 
-    <img id="AIImg">
-
-  </div>
+  <div class="scoreboard" id="scoreboard"></div>
     
 <script src="javascript.js"></script>    
 </body>
