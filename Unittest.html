@@ -1,15 +1,48 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Test Suite</title>
+<link rel="stylesheet" href="https://code.jquery.com/qunit/qunit-2.16.0.css">
+<body>
+  <div id="qunit"></div>
+  <div id="qunit-fixture"></div>
+  <script src="https://code.jquery.com/qunit/qunit-2.16.0.js"></script>
+  <script src="javascript.js"></script>
+</body>
+
 <script>
 
-QUnit.test("se om checkwhowon er riktig?" function (assert)) {
-
-const actual   =
-const expexted =
-asserts.equal(actual, expected);
+//Dummy model
+var playerCard; 
+var computerCard;
 
 
-}
+var playerPickedCard;
+var computerPickedCard;
+
+//Dummy View 
+function updateView(){}
+function clearView(){}
+function setPickedPictures(){}
+
+QUnit.test('1 - se om clicked blir riktig?', function (assert) {
+
+    clicked("EARTH");
+
+    const actual   = playerCard;
+    const expected = 3;
+    assert.equal(actual, expected);
+});
 
 
 
+QUnit.test('2 - sjekk at setPickedPictures blir riktig?', function (assert) {
+    
+    playerCard = 1 ; 
+    setPickedPictures();
+
+    const actual   = playerPickedCard;
+    const expected = "Ninetales.png";
+    assert.equal(actual, expected);
+});
 
 </script>
