@@ -1,17 +1,18 @@
 resultList = document.getElementById("result");
 
-const pictures = ["Ninetales.png", "Ponyta.png", "Chikorita.png", "Who.png"];
+const pictures = ["Who.png", "Ninetales.png", "Ponyta.png", "Chikorita.png"];
 
 const pokemon = {
+    NONE:   0,
     WIND:   1,
     FIRE:   2,
     EARTH:  3,
 }
 const pokenames = {
+    0: "",
     1: "Ninetales",
     2: "Ponyta",
     3: "Chikorita",
-    4: "",
 }
 
 const victor = {
@@ -66,8 +67,8 @@ function letComputerPick()
 // <- test this
 function setPickedPictures()
 {
-    if (playerCard != null) playerPickedCard = pictures[playerCard-1];
-    if (computerCard != null) computerPickedCard = pictures[computerCard-1];
+    if (playerCard != null) playerPickedCard = pictures[playerCard];
+    if (computerCard != null) computerPickedCard = pictures[computerCard];
 }
 
 
@@ -102,10 +103,10 @@ resultList.innerHTML = `<div>You chose ${pokenames[playerCard]}</div><br />
 
 function clearView()
 {
-    playerCard = 4;
-    computerCard = 4;
-    playerPickedCard = pictures[3];
-    computerPickedCard = pictures[3];
+    playerCard = pokemon.NONE;
+    computerCard = pokemon.NONE;
+    playerPickedCard = pictures[playerCard];
+    computerPickedCard = pictures[computerCard];
     winner = victor.NEWGAME;
 
     updateView();
