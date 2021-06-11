@@ -48,7 +48,7 @@ function clicked(id)
 
     setPickedPictures();
     updateView();
-    setTimeout(letComputerPick, 1000);
+    setTimeout(letComputerPick, 1500);
 }
 
 
@@ -60,7 +60,7 @@ function letComputerPick()
 
     setPickedPictures();
     updateView();
-    setTimeout(checkWinner, 1000);
+    setTimeout(checkWinner, 1500);
 }
 
 // <- test this
