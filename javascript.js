@@ -1,6 +1,6 @@
 resultList = document.getElementById("result");
 
-const pictures = ["Ninetales.png", "Ponyta.png", "Chikorita.png"];
+const pictures = ["Ninetales.png", "Ponyta.png", "Chikorita.png", "Who.png"];
 
 const pokemon = {
     WIND:   1,
@@ -11,12 +11,16 @@ const pokenames = {
     1: "Ninetales",
     2: "Ponyta",
     3: "Chikorita",
+    4: "",
 }
 
 const victor = {
-    COMPUTER: "Computer",
-    PLAYER: "Player",
-    TIE: "Ingen",
+    COMPUTER: "Computer won!",
+    PLAYER: "Player won!",
+    TIE: "It's a tie!",
+    NEWGAME: "Please choose a card",
+    DECIDING: "Computer is thinking",
+    CHECKING: "And the winner is...",
 }
 
 // Model
@@ -40,10 +44,11 @@ function clicked(id)
     else if (id == "WIND") playerCard = pokemon.WIND;
     else playerCard = pokemon.FIRE;
 
-    setPickedPictures();
+    winner = victor.DECIDING;
 
+    setPickedPictures();
     updateView();
-    //setTimeout(letComputerPick, 1000);
+    setTimeout(letComputerPick, 1000);
 }
 
 
@@ -51,9 +56,9 @@ function clicked(id)
 function letComputerPick()
 {
     computerCard = Math.ceil(Math.random() * 3);
+    winner = victor.CHECKING;
 
     setPickedPictures();
-
     updateView();
     setTimeout(checkWinner, 1000);
 }
@@ -69,9 +74,9 @@ function setPickedPictures()
 // Her sjekker vi hvem som vant <- test this
 function checkWinner() {
     
-    if ((computerCard - playerCard + 5) % 3 == 1) { winner = victor.COMPUTER; winnerCard = computerCard; }
-    else if ((computerCard - playerCard + 5) % 3 == 0) { winner = victor.PLAYER; winnerCard = playerCard; }
-    else { winner = victor.TIE; winnerCard = tieCard };
+    if ((computerCard - playerCard + 5) % 3 == 1) { winner = victor.COMPUTER; }
+    else if ((computerCard - playerCard + 5) % 3 == 0) { winner = victor.PLAYER; }
+    else { winner = victor.TIE; };
     
     updateView();
 }
@@ -84,10 +89,10 @@ function updateView(){
 
 document.getElementById("result").style.borderWidth = "5px";
 
-resultList.innerHTML = `<div>Du valgte ${pokenames[playerCard]}</div><br />
-                        <div>Maskinen valgte ${pokenames[computerCard]}</div>
+resultList.innerHTML = `<div>You chose ${pokenames[playerCard]}</div><br />
+                        <div>Computer chose ${pokenames[computerCard]}</div>
                         <img src=${playerPickedCard}>
-                        <div>${winner} vant! </div>
+                        <div>${winner}</div>
                         <img src=${computerPickedCard}>
                         
 
@@ -97,5 +102,11 @@ resultList.innerHTML = `<div>Du valgte ${pokenames[playerCard]}</div><br />
 
 function clearView()
 {
+    playerCard = 4;
+    computerCard = 4;
+    playerPickedCard = pictures[3];
+    computerPickedCard = pictures[3];
+    winner = victor.NEWGAME;
 
+    updateView();
 }
