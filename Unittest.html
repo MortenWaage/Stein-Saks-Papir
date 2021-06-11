@@ -12,36 +12,45 @@
 <script>
 
 //Dummy model
-var playerCard; 
-var computerCard;
+//var playerCard; 
+// var computerCard;
 
 
-var playerPickedCard;
-var computerPickedCard;
+// var playerPickedCard;
+// var computerPickedCard;
 
 //Dummy View 
 function updateView(){}
 function clearView(){}
 function setPickedPictures(){}
 
-QUnit.test('1 - se om clicked blir riktig?', function (assert) {
+// QUnit.test('1 - se om clicked blir riktig?', function (assert) {
 
-    clicked("EARTH");
+//     clicked("EARTH");
 
-    const actual   = playerCard;
-    const expected = 3;
-    assert.equal(actual, expected);
-});
+//     let actual   = playerCard;
+//     let expected = 3;
+//     assert.equal(actual, expected);
+// });
 
+// function setPickedPictures()
+// {
+//     if (playerCard != null) playerPickedCard = pictures[playerCard-1];
+//     if (computerCard != null) computerPickedCard = pictures[computerCard-1];
+// }
 
 
 QUnit.test('2 - sjekk at setPickedPictures blir riktig?', function (assert) {
     
-    playerCard = 1 ; 
+    playerCard = 1;
+    computerCard = null;
+    playerPickedCard;
+    computerPickedCard;
+
     setPickedPictures();
 
     const actual   = playerPickedCard;
-    const expected = "Ninetales.png";
+    const expected = pictures[0];
     assert.equal(actual, expected);
 });
 
