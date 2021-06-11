@@ -38,6 +38,7 @@ var computerCard;
 var playerPickedCard;
 var computerPickedCard;
 var winner;
+var gameStarted = false;
 
 /*--------------*
  *    START     *
@@ -49,6 +50,9 @@ clearView();
  *--------------*/
 function clicked(id) 
 {
+    if (gameStarted) return;    
+    gameStarted = true;
+
     clearView();
 
     if (id == "EARTH") playerCard = pokemon.EARTH;
@@ -84,6 +88,7 @@ function checkWinner() {
     else if ((computerCard - playerCard + 5) % 3 == 0) { winner = result.PLAYER; }
     else { winner = result.TIE; };
     
+    gameStarted = false;
     updateView();
 }
 
