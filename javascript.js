@@ -13,6 +13,7 @@ const pokemon = {
     FIRE:   2,
     EARTH:  3,
 }
+
 const pokenames = {
     0: "",
     1: "Ninetales",
@@ -37,11 +38,9 @@ var playerPickedCard;
 var computerPickedCard;
 var winnerCard;
 
-
 clearView();
-// Controller
 
-//Dette er funksjonen hvor du velger kort <- test this
+// Controller
 function clicked(id) 
 {
     clearView();
@@ -57,8 +56,6 @@ function clicked(id)
     setTimeout(letComputerPick, 1500);
 }
 
-
-// Dette er funksjonen hvor datamaskinen velger kort
 function letComputerPick()
 {
     computerCard = Math.ceil(Math.random() * 3);
@@ -69,15 +66,12 @@ function letComputerPick()
     setTimeout(checkWinner, 1500);
 }
 
-// <- test this
 function setPickedPictures()
 {
     if (playerCard != null) playerPickedCard = pictures[playerCard];
     if (computerCard != null) computerPickedCard = pictures[computerCard];
 }
 
-
-// Her sjekker vi hvem som vant <- test this
 function checkWinner() {
     
     if ((computerCard - playerCard + 5) % 3 == 1) { winner = result.COMPUTER; }
@@ -86,9 +80,6 @@ function checkWinner() {
     
     updateView();
 }
-
-
-
 
 // View
 function updateView(){
@@ -100,10 +91,7 @@ resultList.innerHTML = `<div>You chose ${pokenames[playerCard]}</div><br />
                         <img src=${playerPickedCard}>
                         <div>${winner}</div>
                         <img src=${computerPickedCard}>
-                        
-
-`;
-
+                        `;
 }
 
 function clearView()
