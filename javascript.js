@@ -30,17 +30,23 @@ const result = {
     CHECKING: "And the winner is...",
 }
 
-// Model
+/*--------------*
+ *    MODEL     *
+ *--------------*/
 var playerCard; 
 var computerCard;
-var winner;
 var playerPickedCard;
 var computerPickedCard;
-var winnerCard;
+var winner;
 
+/*--------------*
+ *    START     *
+ *--------------*/
 clearView();
 
-// Controller
+/*--------------*
+ *  CONTROLLER  *
+ *--------------*/
 function clicked(id) 
 {
     clearView();
@@ -81,7 +87,9 @@ function checkWinner() {
     updateView();
 }
 
-// View
+/*--------------*
+ *     VIEW     *
+ *--------------*/
 function updateView(){
 
 resultList.innerHTML = `<div>You chose ${pokenames[playerCard]}</div><br />
