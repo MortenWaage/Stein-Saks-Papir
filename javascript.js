@@ -109,9 +109,8 @@ function clearView()
 {
     playerCard = pokemon.NONE;
     computerCard = pokemon.NONE;
-    playerPickedCard = pictures[playerCard];
-    computerPickedCard = pictures[computerCard];
     winner = result.NEWGAME;
+    setPickedPictures()   
 
     updateView();
 }
