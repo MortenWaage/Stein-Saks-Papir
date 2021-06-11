@@ -1,10 +1,10 @@
 resultList = document.getElementById("result");
 
 const pictures = [
-    "Who.png",
-    "Ninetales.png", 
-    "Ponyta.png", 
-    "Chikorita.png"
+    "img/Who.png",
+    "img/Ninetales.png", 
+    "img/Ponyta.png", 
+    "img/Chikorita.png"
 ];
 
 const pokemon = {

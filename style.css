@@ -1,7 +1,7 @@
 body{    
 background-color: rgb(207, 250, 187); 
 background-repeat: no-repeat;  
-background-image: url("bakgrunnsbilde.jpg");
+background-image: url("img/bakgrunnsbilde.jpg");
 background-size: cover;
 
 font-family: sans-serif;
