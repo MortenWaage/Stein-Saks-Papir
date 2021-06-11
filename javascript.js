@@ -84,8 +84,6 @@ function checkWinner() {
 // View
 function updateView(){
 
-document.getElementById("result").style.borderWidth = "5px";
-
 resultList.innerHTML = `<div>You chose ${pokenames[playerCard]}</div><br />
                         <div>Computer chose ${pokenames[computerCard]}</div>
                         <img src=${playerPickedCard}>

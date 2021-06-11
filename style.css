@@ -55,7 +55,7 @@ font-size: 30px;
 margin-top: 30px;
 padding-top: 10px;
 display: grid;
-border: 0px solid;
+border: 5px solid;
 border-color: rgb(0, 3, 0);
 justify-content: center;
 grid-template-columns: repeat(3, 1fr);
