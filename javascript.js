@@ -15,7 +15,7 @@ const pokenames = {
     3: "Chikorita",
 }
 
-const victor = {
+const result = {
     COMPUTER: "Computer won!",
     PLAYER: "Player won!",
     TIE: "It's a tie!",
@@ -45,7 +45,7 @@ function clicked(id)
     else if (id == "WIND") playerCard = pokemon.WIND;
     else playerCard = pokemon.FIRE;
 
-    winner = victor.DECIDING;
+    winner = result.DECIDING;
 
     setPickedPictures();
     updateView();
@@ -57,7 +57,7 @@ function clicked(id)
 function letComputerPick()
 {
     computerCard = Math.ceil(Math.random() * 3);
-    winner = victor.CHECKING;
+    winner = result.CHECKING;
 
     setPickedPictures();
     updateView();
@@ -75,9 +75,9 @@ function setPickedPictures()
 // Her sjekker vi hvem som vant <- test this
 function checkWinner() {
     
-    if ((computerCard - playerCard + 5) % 3 == 1) { winner = victor.COMPUTER; }
-    else if ((computerCard - playerCard + 5) % 3 == 0) { winner = victor.PLAYER; }
-    else { winner = victor.TIE; };
+    if ((computerCard - playerCard + 5) % 3 == 1) { winner = result.COMPUTER; }
+    else if ((computerCard - playerCard + 5) % 3 == 0) { winner = result.PLAYER; }
+    else { winner = result.TIE; };
     
     updateView();
 }
@@ -107,7 +107,7 @@ function clearView()
     computerCard = pokemon.NONE;
     playerPickedCard = pictures[playerCard];
     computerPickedCard = pictures[computerCard];
-    winner = victor.NEWGAME;
+    winner = result.NEWGAME;
 
     updateView();
 }
