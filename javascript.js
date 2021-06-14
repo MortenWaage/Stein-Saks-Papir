@@ -92,6 +92,16 @@ function checkWinner() {
     updateView();
 }
 
+function clearView()
+{
+    playerCard = pokemon.NONE;
+    computerCard = pokemon.NONE;
+    winner = result.NEWGAME;
+    setPickedPictures()   
+
+    updateView();
+}
+
 /*--------------*
  *     VIEW     *
  *--------------*/
@@ -103,14 +113,4 @@ resultList.innerHTML = `<div>You chose ${pokenames[playerCard]}</div><br />
                         <div>${winner}</div>
                         <img src=${computerPickedCard}>
                         `;
-}
-
-function clearView()
-{
-    playerCard = pokemon.NONE;
-    computerCard = pokemon.NONE;
-    winner = result.NEWGAME;
-    setPickedPictures()   
-
-    updateView();
 }
