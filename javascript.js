@@ -23,7 +23,7 @@ const pokenames = {
 
 const result = {
     COMPUTER: "Computer won!",
-    PLAYER: "Player won!",
+    PLAYER: "You won!",
     TIE: "It's a tie!",
     NEWGAME: "Please choose a card",
     DECIDING: "Computer is thinking",
